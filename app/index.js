@@ -1,15 +1,23 @@
 import { StyleSheet, Text, View } from "react-native";
+import logo from './assets/logoHobbit.jpg';
+
 
 export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
+         <View style={styles.viewLogo} >
+        <Image source={logo} style={styles.logo} /> 
+        
+        </View>
         <Text style={styles.title}>Página Inicial</Text>
         <Text style={styles.subtitle}>Pré-requisito para a disciplina de DDM</Text>
       </View>
     </View>
+     
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
