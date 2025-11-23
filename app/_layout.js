@@ -1,46 +1,20 @@
-import { Tabs } from "expo-router";
-import FontAwesome from "@expo/vector-icons/FontAwesome";
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import { Slot } from "expo-router";
+import { View, Text } from "react-native";
+import { useFonts, MedievalSharp_400Regular } from "@expo-google-fonts/medievalsharp";
 
-export default function TabLayout() {
+export default function RootLayout() {
+
+  const [fontsLoaded] = useFonts({
+    MedievalSharp_400Regular,
+  });
+
+  if (!fontsLoaded) {
     return (
-        <Tabs>
-            <Tabs.Screen 
-            name="index" 
-            options={{ 
-                title: "Página Inicial",
-                headerShown: false,
-                tabBarIcon: ({color}) => ( 
-                 <FontAwesome name="home" size={24} color={color} />
-                ),
-            }}/>
-            <Tabs.Screen 
-            name="pageone" 
-            options={{ 
-                title: "Obrigatório", 
-                headerShown: false,
-                tabBarIcon: ({color}) => ( 
-                 <FontAwesome name="tag" size={24} color={color} />
-                ), 
-            }}/>
-            <Tabs.Screen 
-            name="pagetwo" 
-            options={{ 
-                title: "Livre", 
-                headerShown: false,
-                tabBarIcon: ({color}) => ( 
-                 <FontAwesome name="free-code-camp" size={24} color={color} />
-                ),  
-            }}/>
-            <Tabs.Screen 
-            name="aboutme" 
-            options={{ 
-                title: "Sobre Mim", 
-                headerShown: false,
-                tabBarIcon: ({color}) => ( 
-                <MaterialIcons name="nature-people" size={24} color={color} />
-                ),
-            }}/>
-        </Tabs>
+      <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+        <Text>Carregando fontes...</Text>
+      </View>
     );
+  }
+
+  return <Slot />;
 }
