@@ -1,82 +1,79 @@
-import { StyleSheet, Text, View, ImageBackground, Image, ScrollView, Platform } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Platform } from "react-native";
 import fundo from "../../assets/fundotwo.jpg";
+import logo from "../../assets/logoHobbit.jpg";
 
 export default function Page() {
   return (
-    <View style={styles.root}>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <View style={styles.container}>
+    
+       <View style={styles.fundoContainer}>
+          <Image 
+            source={fundo} 
+            style={[
+              styles.fundoImage,
+              Platform.OS === "web" && styles.fundoWeb,
+            ]} 
+          />
+        </View>
 
-      {/* FUNDO BLUR */}
-      <ImageBackground
-        source={fundo}
-        style={styles.bgBlur}
-        imageStyle={styles.bgBlurImage}
-        blurRadius={20}
-      >
-        
-        <ScrollView contentContainerStyle={styles.scroll}>
+        <View style={styles.divider} />
+            
+        <Image source={logo} style={styles.logo} />
 
-          {/* IMAGEM PRINCIPAL (WEB = banner / MOBILE = completa) */}
-          <Image source={fundo} style={styles.mainImage} />
+        <View style={styles.content}>
+          <Text style={styles.title}>Mapa da Terra-média</Text>
+        </View>
 
-          <View style={styles.content}>
-            <Text style={styles.title}>Mobile perfeito e Web banner!</Text>
-            <Text style={styles.subtitle}>Imagem inteira, sem distorção em ambos.</Text>
-          </View>
-
-          <View style={{ height: 900 }} />
-
-        </ScrollView>
-
-      </ImageBackground>
-    </View>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  root: {
+  container: {
     flex: 1,
+    backgroundColor: "#C2B280",
+    alignItems: "center",
   },
 
-  bgBlur: {
-    flex: 1,
+  fundoContainer: {
+    width: "100%",
+    height: 250,
+    overflow: "hidden",
   },
 
-  bgBlurImage: {
+  fundoImage: {
+    width: "100%",
+    height: "100%",
     resizeMode: "cover",
   },
 
-  scroll: {
-    flexGrow: 1,
-    alignItems: "center",
+  divider: {
+    width: "100%",
+    height: 4,
+    backgroundColor: "#495E3A",
   },
 
-  mainImage: {
-    width: "100%",
-    height: undefined,
-    aspectRatio: 16 / 9,
-    resizeMode: "contain",
-    marginTop: 20,
-    borderRadius: 10,
-    maxHeight: 350,
+  logo: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    marginTop: -70,
+    borderWidth: 4,
+    borderColor: "#495E3A",
+    zIndex: 5,
   },
 
   content: {
-    marginTop: 30,
-    paddingHorizontal: 20,
+    marginTop: 20,
     alignItems: "center",
+    paddingHorizontal: 20,
   },
 
   title: {
-    fontSize: 24,
-    color: "#fff",
-    fontWeight: "bold",
-    textAlign: "center",
-  },
-
-  subtitle: {
-    fontSize: 16,
-    color: "#EEE",
-    marginTop: 10,
+    fontSize: 40,
+    fontFamily: "MedievalSharp_400Regular",
     textAlign: "center",
   },
 });

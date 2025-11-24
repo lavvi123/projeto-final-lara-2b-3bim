@@ -1,35 +1,82 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Image, ScrollView, Platform } from "react-native";
+import banner from "../../assets/lord.jpg";
+import logo from "../../assets/logoHobbit.jpg";
+
+
 
 export default function Page() {
   return (
-    <View style={styles.container}>
-      <View style={styles.main}>
-        <Text style={styles.title}>Tema Livre</Text>
-        <Text style={styles.subtitle}>Tema Livre a ser trabalhado</Text>
+    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
+      <View style={styles.container}>
+
+        <View style={styles.bannerContainer}>
+          <Image
+            source={banner}
+            style={[
+              styles.bannerImage,
+              Platform.OS === "web" && styles.bannerWeb,
+            ]}
+          />
+        </View>
+
+        <View style={styles.divider} />
+
+        <Image source={logo} style={styles.logo} />
+
+        <View style={styles.content}>
+          <Text style={styles.title}>Wikipedia O Senhor dos Anéis</Text>
+        </View>
+
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: "#493808a5",
     alignItems: "center",
-    padding: 24,
-    backgroundColor: "#FFFAF0",
   },
-  main: {
-    flex: 1,
-    justifyContent: "center",
-    maxWidth: 960,
-    marginHorizontal: "auto",
+
+  bannerContainer: {
+    width: "100%",
+    height: 250,
+    overflow: "hidden",
   },
+
+  bannerImage: {
+    width: "100%",
+    height: "100%",
+    resizeMode: "cover",
+  },
+
+ divider: {
+    width: "100%",
+    height: 4,
+    backgroundColor: "#352b0bff",
+  },
+
+  logo: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    marginTop: -70,
+    borderWidth: 4,
+    borderColor: "#352b0bff",
+    zIndex: 5,
+  },
+
+  content: {
+    marginTop: 20,
+    alignItems: "center",
+    paddingHorizontal: 20,
+  },
+
   title: {
-    fontSize: 64,
-    fontWeight: "bold",
-  },
-  subtitle: {
-    fontSize: 36,
-    color: "#38434D",
+    fontSize: 40,
+    fontFamily: "MedievalSharp_400Regular",
+    color: "#D0C060",
+    textAlign: "center",
   },
 });
