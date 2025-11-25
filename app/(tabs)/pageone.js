@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, ScrollView, Platform } from "react-native";
-import banner from "../../assets/arte.jpg";
-import logo from "../../assets/logoHobbit.jpg";
+import banner from "../../assets/monet.jpg";
+import logo from "../../assets/artelogo.jpg";
 
 
 

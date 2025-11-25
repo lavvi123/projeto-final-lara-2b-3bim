@@ -398,10 +398,63 @@ export default function CharacterPage() {
   </Text>
 
 </View>
+{/* ======================= */}
+{/* CARD DO FARAMIR */}
+{/* ======================= */}
+<View style={styles.card}>
 
+  <Image 
+    source={require('../../assets/Faramir.jpg')}
+    style={styles.avatar}
+  />
 
+  <Text style={styles.name}>Faramir, Capitão de Ithilien</Text>
 
+  <View style={styles.infoBox}>
+    <Text style={styles.label}>Raça:</Text>
+    <Text style={styles.value}>Humano (Dúnadan de Gondor)</Text>
+  </View>
 
+  <View style={styles.infoBox}>
+    <Text style={styles.label}>Afiliação:</Text>
+    <Text style={styles.value}>Gondor / Guardiões de Ithilien</Text>
+  </View>
+
+  <View style={styles.infoBox}>
+    <Text style={styles.label}>Papel/Profissão:</Text>
+    <Text style={styles.value}>Capitão de Ithilien / Comandante militar</Text>
+  </View>
+
+  <View style={styles.infoBox}>
+    <Text style={styles.label}>Família:</Text>
+    <Text style={styles.value}>Denethor II (pai), Boromir (irmão)</Text>
+  </View>
+
+  <Text style={styles.section}>História</Text>
+  <Text style={styles.story}>
+    Faramir nasceu em Minas Tirith como o segundo filho de Denethor II, Regente
+    de Gondor. Ao contrário de seu irmão Boromir, que era celebrado por sua força
+    e bravura, Faramir sempre foi conhecido por sua sabedoria, bondade e
+    profundo senso de justiça. Ele admirava o legado dos antigos reis e
+    estudava história, estratégia e as tradições da Terra-média com grande
+    dedicação.
+
+    Como Capitão de Ithilien, liderou os Guardiões na resistência às forças de
+    Sauron. Durante a Guerra do Anel, encontrou Frodo e Sam e, mesmo sabendo do
+    poder do Um Anel, resistiu à tentação que corrompeu tantos outros, provando
+    sua pureza de coração — uma qualidade que até Gandalf reconhecia.
+
+    Após o ataque de Osgiliath, Faramir sofreu gravíssimos ferimentos e foi salvo
+    graças aos cuidados de Aragorn. Em sua recuperação conheceu Éowyn, com quem
+    formou um profundo laço que culminou em casamento. Após a queda de Sauron,
+    tornou-se Príncipe de Ithilien, governando com sabedoria e restaurando a
+    paz na região devastada pela guerra.
+
+    Faramir é lembrado como um dos homens mais nobres de Gondor: forte,
+    compassivo e guiado pela honra acima da glória.
+  </Text>
+
+</View>
 
 
     </ScrollView>
