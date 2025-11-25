@@ -1,3 +1,5 @@
+
+
 import { Slot } from "expo-router";
 import {useFonts, MedievalSharp_400Regular} from "@expo-google-fonts/medievalsharp"
 import { Text, View } from "react-native";

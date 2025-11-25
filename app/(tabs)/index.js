@@ -1,82 +1,69 @@
-import { StyleSheet, Text, View, Image, ScrollView, Platform } from "react-native";
-import banner from "../../assets/banner.jpg";
-import logo from "../../assets/logoHobbit.jpg";
-
-
+import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function Page() {
   return (
-    <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
-      <View style={styles.container}>
+    <View style={styles.container}>
+      <View style={styles.card}>
+        <Image 
+          source={require('../../assets/logo.jpg')}
+          style={styles.logo}
+        />
 
-        <View style={styles.bannerContainer}>
-          <Image
-            source={banner}
-            style={[
-              styles.bannerImage,
-              Platform.OS === "web" && styles.bannerWeb,
-            ]}
-          />
-        </View>
-
-        <View style={styles.divider} />
-
-        <Image source={logo} style={styles.logo} />
-
-        <View style={styles.content}>
-          <Text style={styles.title}>Arquivos de Gondor</Text>
-        </View>
-
+        <Text style={styles.title}>Guardião da Terra-Média</Text>
+        <Text style={styles.subtitle}>Pré-requisito para a disciplina de DDM</Text>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#495E3A",
+    justifyContent: "center",
     alignItems: "center",
+    padding: 24,
+    backgroundColor: "#1f2d16", // verde-floresta escuro
   },
 
-  bannerContainer: {
-    width: "100%",
-    height: 250,
-    overflow: "hidden",
+  // CARD ESTILO "PERGAMINHO"
+  card: {
+    backgroundColor: "#f5e6c8", // pergaminho claro
+    padding: 30,
+    borderRadius: 20,
+    alignItems: "center",
+    width: "85%",
+    shadowColor: "#000",
+    shadowOpacity: 0.4,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 4 },
+    elevation: 8,
+    borderWidth: 3,
+    borderColor: "#b48a4f", // dourado envelhecido
   },
 
-  bannerImage: {
-    width: "100%",
-    height: "100%",
-    resizeMode: "cover",
-  },
-
- divider: {
-    width: "100%",
-    height: 4,
-    backgroundColor: "#C2B280",
-  },
-
+  // IMAGEM CIRCULAR COM AURA DOURADA
   logo: {
     width: 150,
     height: 150,
     borderRadius: 75,
-    marginTop: -70,
     borderWidth: 4,
-    borderColor: "#C2B280",
-    zIndex: 5,
+    borderColor: "#b48a4f",
+    marginBottom: 20,
   },
 
-  content: {
-    marginTop: 20,
-    alignItems: "center",
-    paddingHorizontal: 20,
-  },
-
+  // TÍTULO COM FONTE MEDIEVAL
   title: {
-    fontSize: 40,
-    fontFamily: "MedievalSharp_400Regular",
-    color: "#D0C060",
+    fontSize: 36,
+    fontWeight: "bold",
+    textAlign: "center",
+    color: "#4a3b19",
+    marginBottom: 10,
+    fontFamily: "medieval", // << FONTE MEDIEVAL APLICADA
+  },
+
+  subtitle: {
+    fontSize: 20,
+    color: "#6c5a2e",
     textAlign: "center",
   },
 });
