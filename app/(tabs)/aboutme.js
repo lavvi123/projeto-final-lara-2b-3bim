@@ -4,8 +4,11 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.card}>
+
+       
+
         <Image
-          source={{ uri: "https://placekitten.com/300/300" }}
+          source={require('../../assets/lara.jpg')}
           style={styles.avatar}
         />
         <Text style={styles.title}>Lara Lavínia Harder</Text>
@@ -14,7 +17,7 @@ export default function Page() {
         <Text style={styles.info}>Interesses: Yoga, escrita, poesia, storytelling</Text>
         <Text style={styles.info}>Projetos: Site para fãs de Tolkien e História da Arte </Text>
       <View style={styles.main}>
-        <Text style={styles.title}>oi</Text>
+        
       </View>
     </View>
     </View>

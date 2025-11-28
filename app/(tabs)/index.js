@@ -5,7 +5,7 @@ import logo from "../../assets/logoHobbit.jpg";
 import tolkien from "../../assets/tolkien.jpg";
 import hobbit from "../../assets/livroOHobbit.jpg";
 import lotr from "../../assets/senhordosaneis.jpg"; 
-import couro from "../../assets/couroverde.jpg"; // <-- textura de couro envelhecido
+import couro from "../../assets/couroverde.jpg"; 
 
 export default function Page() {
   return (
@@ -21,15 +21,15 @@ export default function Page() {
         ]}
       >
 
-        {/* Banner */}
+       
         <View style={styles.bannerContainer}>
           <Image source={banner} style={styles.bannerImage} />
         </View>
 
-        {/* Logo */}
+      
         <Image source={logo} style={styles.logo} />
 
-        {/* Card de Boas-vindas */}
+      
         <View style={styles.welcomeCard}>
           <Text style={styles.welcomeTitle}>Bem-vindos à Terra-Média</Text>
           <Text style={styles.welcomeText}>
@@ -39,16 +39,16 @@ export default function Page() {
           </Text>
         </View>
 
-        {/* Faixa com conteúdo */}
+       
         <View style={styles.authorStrip}>
 
-          {/* TÍTULO DA SESSÃO */}
+          
           <Text style={styles.sectionTitle}>Sobre a Obra de Tolkien</Text>
 
-          {/* RUNAS */}
+         
           <Text style={styles.runes}>ᛟ ᚠ ᛞ ᚱ ᚨ ᛉ ᛟ</Text>
 
-          {/* CARD - Tolkien */}
+         
           <View style={styles.section}>
             <Image source={tolkien} style={styles.authorImage} />
             <View style={styles.authorTextBox}>
@@ -60,24 +60,25 @@ export default function Page() {
             </View>
           </View>
 
-          {/* RUNAS */}
           <Text style={styles.runes}>ᛟ ᚠ ᛞ ᚱ ᚨ ᛉ ᛟ</Text>
 
-          {/* CARD – O Hobbit */}
+         
           <View style={styles.section}>
             <Image source={hobbit} style={styles.authorImage} />
             <View style={styles.authorTextBox}>
               <Text style={styles.authorName}>O Hobbit</Text>
               <Text style={styles.authorDescription}>
-                “O Hobbit” conta a jornada de Bilbo Bolseiro...
+              Bilbo Bolseiro é um hobbit que leva uma vida confortável e sem ambições. 
+                Mas seu contentamento é perturbado quando Gandalf, o mago, 
+                e uma companhia de anões batem à sua porta.
               </Text>
             </View>
           </View>
 
-          {/* RUNAS */}
+         
           <Text style={styles.runes}>ᛟ ᚠ ᛞ ᚱ ᚨ ᛉ ᛟ</Text>
 
-          {/* CARD – Senhor dos Anéis */}
+     
           <View style={styles.section}>
             <Image source={lotr} style={styles.authorImage} />
             <View style={styles.authorTextBox}>
@@ -88,7 +89,7 @@ export default function Page() {
             </View>
           </View>
 
-          {/* RUNAS FINAL */}
+      
           <Text style={styles.runes}>ᛟ ᚠ ᛞ ᚱ ᚨ ᛉ ᛟ</Text>
 
         </View>
@@ -101,7 +102,7 @@ export default function Page() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#0d1f13", // fallback quando não for web
+    backgroundColor: "#0d1f13", 
     alignItems: "center",
   },
 
