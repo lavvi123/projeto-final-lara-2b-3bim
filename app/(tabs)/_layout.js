@@ -51,13 +51,13 @@ export default function TabLayout() {
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
-          backgroundColor: "#E8DCC2", // PERGAMINHO
-          borderTopColor: "#8B6F47", // marrom queimado
+          backgroundColor: "#E8DCC2", 
+          borderTopColor: "#8B6F47", 
           borderTopWidth: 3,
           height: 65,
         },
-        tabBarActiveTintColor: "#BFA64C", // dourado suave
-        tabBarInactiveTintColor: "#5E4A2F", // marrom manuscrito
+        tabBarActiveTintColor: "#BFA64C", 
+        tabBarInactiveTintColor: "#5E4A2F", 
       }}
     >
       <Tabs.Screen

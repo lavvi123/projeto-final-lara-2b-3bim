@@ -5,7 +5,7 @@ export default function CharacterPage() {
     <ScrollView contentContainerStyle={styles.container}>
 
       
-      {/* CARD DO FRODO */}
+  
       <View style={styles.card}>
 
         <Image 
@@ -45,7 +45,6 @@ export default function CharacterPage() {
       </View>
 
 
-      {/* CARD DO SAMWISE */}
   
       <View style={styles.card}>
 
@@ -89,7 +88,7 @@ export default function CharacterPage() {
       </View>
 
    
-      {/* CARD DO MERRY */}
+  
      
       <View style={styles.card}>
 
@@ -136,7 +135,7 @@ export default function CharacterPage() {
 </Text>
       </View>
 
-{/* CARD DO PIPPIN */}
+
 
 <View style={styles.card}>
 
@@ -185,9 +184,6 @@ export default function CharacterPage() {
 
 </View>
 
-
-{/* CARD DO ARAGORN */}
-
 <View style={styles.card}>
 
   <Image 
@@ -235,7 +231,6 @@ export default function CharacterPage() {
 </View>
 
 
-{/* CARD DO LEGOLAS */}
 
 <View style={styles.card}>
 
@@ -285,7 +280,6 @@ export default function CharacterPage() {
 </View>
 
 
-{/* CARD DO GIMLI */}
 
 <View style={styles.card}>
 
@@ -341,7 +335,7 @@ export default function CharacterPage() {
 </View>
 
 
-{/* CARD DO BOROMIR */}
+
 
 <View style={styles.card}>
 
@@ -395,7 +389,7 @@ export default function CharacterPage() {
   </Text>
 
 </View>
-{/* CARD DO FARAMIR */}
+
 
 <View style={styles.card}>
 
@@ -452,7 +446,7 @@ export default function CharacterPage() {
 
 </View>
 
-{/* CARD DA GALADRIEL */}
+
 
 <View style={styles.card}>
 
@@ -506,7 +500,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 </View>
 
 
-{/* CARD DA ÉOWYN */}
+
 
 <View style={styles.card}>
 
@@ -553,7 +547,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 </View>
 
 
-{/* CARD DO ELROND */}
+
 
 <View style={styles.card}>
 
@@ -601,7 +595,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DA ARWEN */}
+
 
 <View style={styles.card}>
 
@@ -650,7 +644,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 </View>
 
 
-{/* CARD DO GANDALF */}
+
 
 <View style={styles.card}>
 
@@ -700,7 +694,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO SAURON */}
+
 
 <View style={styles.card}>
 
@@ -746,7 +740,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO SARUMAN */}
+
 
 <View style={styles.card}>
 
@@ -794,7 +788,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO GOLLUM */}
+
 
 <View style={styles.card}>
 
@@ -842,7 +836,6 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO THÉODEN */}
 
 <View style={styles.card}>
 
@@ -888,7 +881,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO ÉOMER */}
+
 
 <View style={styles.card}>
 
@@ -936,7 +929,7 @@ Ao final de sua história, Galadriel se torna uma figura de sabedoria e sacrifí
 
 </View>
 
-{/* CARD DO DENETHOR */}
+
 
 <View style={styles.card}>
 
@@ -1011,7 +1004,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     shadowOffset: { width: 0, height: 4 },
     elevation: 8,
-    marginBottom: 40, // espaço entre os cards
+    marginBottom: 40,
   },
 
   avatar: {

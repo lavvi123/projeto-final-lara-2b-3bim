@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  /* Banner */
+
   bannerContainer: {
     width: "100%",
     height: Platform.OS === "web" ? 260 : 320,
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
 
-  /* Logo */
+ 
   logo: {
     width: Platform.OS === "web" ? 200 : 160,
     height: Platform.OS === "web" ? 200 : 160,
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
   },
 
-  /* Card de boas-vindas */
+  
   welcomeCard: {
     marginTop: 25,
     backgroundColor: "rgba(232, 220, 194, 0.95)",
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
     lineHeight: 30,
   },
 
-  /* Faixa */
+
   authorStrip: {
     backgroundColor: "rgba(232, 220, 194, 0.94)",
     borderTopWidth: 4,
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     marginTop: 35,
   },
 
-  /* TÍTULO DA SESSÃO */
+  
   sectionTitle: {
     fontFamily: "MedievalSharp_400Regular",
     fontSize: Platform.OS === "web" ? 40 : 32,
@@ -190,7 +190,7 @@ const styles = StyleSheet.create({
     letterSpacing: 2,
   },
 
-  /* Cards */
+
   section: {
     flexDirection: "row",
     alignItems: "center",
@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     lineHeight: 26,
   },
 
-  /* Runas */
+
   runes: {
     textAlign: "center",
     fontSize: Platform.OS === "web" ? 28 : 22,
